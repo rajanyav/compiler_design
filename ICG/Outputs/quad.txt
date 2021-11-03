@@ -1,0 +1,36 @@
+	Op		Arg1		Arg2		Res
+------------------------------------------------------------------------
+	=		5		  		x
+	=		1		  		p
+	=		1		  		i
+	Label		  		  		L0
+	<=		i		x		t0
+	ifFalse		t0		  		L1
+	*		x		i		t1
+	=		t1		  		p
+	+		i		1 		t2
+	=		t2		  		i
+	goto		  		  		L0
+	 Label		  		  		L1
+	=		5		  		a
+	=		7		  		b
+	>		a		b		t3
+	ifFalse		t3		  		L2
+	+		a		5		t4
+	=		t4		  		t5
+	goto		  		  		L3
+	Label		  		  		L2
+	+		b		5		t6
+	=		t6		  		t6
+	Label		  		  		L3
+	=		t3		  		j
+	=		5		  		n
+	=		1		  		p
+	=		1		  		i
+	Label		  		  		L4
+	<=		i		n		t7
+	ifFalse		t7		  		L5
+	*		p		i		t8
+	=		t8		  		p
+	goto		  		  		L4
+	 Label		  		  		L5
